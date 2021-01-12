@@ -43,15 +43,15 @@ def get_filters():
             
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     day=''
-    day_options=['All','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+    day_options=['all','monday','tuesday','wednesday','thursday','friday','saturday','sunday']
     while day not in day_options:
         print("What day of the week would you like data for? You can also put 'All' to get data for every day of the week.")
-        day=input().title()
+        day=input().lower()
         
         if day not in day_options:
             print("Please enter a valid option.")
 
-    print('You have chosen: ' + city.title() + ', ' + month.title() + ', ' + day)
+    print('You have chosen: ' + city.title() + ', ' + month.title() + ', ' + day.title())
     print('-'*40)
     
     #changing month to number to match data in dataframe
@@ -96,8 +96,8 @@ def load_data(city, month, day):
     if month != 0:
         df=df[df['month'] == month]
         
-    if day != 'All':
-        df=df[df['weekday'] == day]
+    if day != 'all':
+        df=df[df['weekday'] == day.title()]
 
 
     return df
@@ -210,7 +210,7 @@ def user_stats(df):
         print('The count of each gender is:')
         print(gender_counts)
     else:
-        print('Gender columns does not exist for this city')
+        print('Gender column does not exist for this city')
 
     # TO DO: Display earliest, most recent, and most common year of birth
     if 'Birth Year' in columns:
