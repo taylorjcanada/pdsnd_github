@@ -227,6 +227,36 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+def raw_data(df):
+    #Ask user if they want to see raw user data
+    display_data='yes'
+    while display_data=='yes':
+        print("Would you like to see 5 rows of raw data? Please enter 'yes' or 'no'.")
+        display_data=input().lower()
+        
+        if display_data not in ['yes','no']:
+            print("Incorrect input entered, please enter 'yes' or 'no'.")
+            display_data=input().lower()
+        elif display_data=='yes':
+            print(df.head())
+        else:
+            print("You have chosen not to display raw data.")
+        #ask if they want to see additional data
+        while display_data=='yes':
+            print("Would you like to see an additional 5 rows of data?")
+            display_data=input().lower()
+            count=0
+            
+            if display_data not in ['yes','no']:
+                print("Incorrect input entered, please enter 'yes' or 'no'.")
+                display_data=input().lower()
+            elif display_data=='yes':
+                count+=5
+                print(df[count:count+5])
+            else:
+                print("You have chosen not to display additional raw data.")
+            
+
 
 def main():
     while True:
@@ -237,6 +267,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
+        raw_data(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
