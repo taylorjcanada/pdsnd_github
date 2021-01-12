@@ -10,7 +10,7 @@
 ### Files used
 	bikeshare.py
 	chicago.csv
-	new-york.csv
+	new_york.csv
 	washington.csv
 
 ### Credits
