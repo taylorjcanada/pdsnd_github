@@ -22,7 +22,9 @@ def get_filters():
     city_options=['chicago','washington','new_york_city']
     while city not in city_options:
         print("Which city would you like data from? The options are Chicago, New York City, or Washington.")
+# The .lower makes all letter lower case, in case the user capitalizes anything
         city=input().lower()
+# This replaces the space in 'New York' to an underscore for proper use later on
         city=city.replace(' ','_')
         
         if city not in city_options:
