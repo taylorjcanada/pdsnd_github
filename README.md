@@ -1,16 +1,22 @@
 ### Date created
-Include the date you created this project and README file.
+1/12/21
 
 ### Project Title
-Replace the Project Title
+pdsnd_github
 
 ### Description
-Describe what your project is about and what it does
+This project take bike data and creates a program to communicate that data.
 
 ### Files used
-Include the files used
+bikeshare.py
+chicago.csv
+new-york.csv
+washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+websites used:
+	https://pandas.pydata.org/pandas-docs/version/0.23.2/generated/pandas.read_csv.html#pandas.read_csv
+	https://pandas.pydata.org/pandas-docs/version/0.23.2/timeseries.html#time-date-components
+	https://pandas.pydata.org/pandas-docs/version/0.23.2/timeseries.html
+	https://numpy.org/devdocs/reference/routines.math.html?highlight=arithmetic#mathematical-functions
 
-Editing for udacity project.
