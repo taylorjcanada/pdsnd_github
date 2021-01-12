@@ -1,17 +1,17 @@
 ### Date created
-1/12/21
+	1/12/21
 
 ### Project Title
-pdsnd_github
+	pdsnd_github
 
 ### Description
-This project take bike data and creates a program to communicate that data.
+	This project take bike data and creates a program to communicate that data.
 
 ### Files used
-bikeshare.py
-chicago.csv
-new-york.csv
-washington.csv
+	bikeshare.py
+	chicago.csv
+	new-york.csv
+	washington.csv
 
 ### Credits
 websites used:
